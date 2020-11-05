@@ -1,8 +1,9 @@
 import sys
 
-sys.path.append("D:/Artfx/GarciaTD4/PythonDCC")
+sys.path.append(r'D:/Artfx/GarciaTD4/PythonDCC/pipeline')
+sys.path.append(r'D:/Artfx/GarciaTD4/PythonDCC/QtLib')
 
-from pipeline.engines import engine
+from pipeline.engine import engine
 from Qt import QtWidgets
 
 app = QtWidgets.QApplication(sys.argv)

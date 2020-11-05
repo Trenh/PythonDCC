@@ -1,23 +1,21 @@
 import sys
 
 class Engine(object) :
-    def open() :
+    def open(self,path) :
         pass
         
-    def save() :
+    def save(self) :
         pass
 
 def get_current():
     engine = Engine()
 
-    if 'maya' in sys.executable :
-        import maya_engine
-        reload(maya_engine)
+    if 'maya' in sys.executable:
+        from pipeline.engine import maya_engine
         engine = maya_engine.MayaEngine()
-        
-    if 'houdini' in sys.executable :
-        import houdini_engine
-        reload(houdini_engine)
+
+    if 'houdini' in sys.executable:
+        from pipeline.engine import houdini_engine
         engine = houdini_engine.HoudiniEngine()
     
     return engine

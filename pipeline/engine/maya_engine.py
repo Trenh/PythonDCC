@@ -1,4 +1,4 @@
-import engine
+from pipeline.engine import engine
 import maya.cmds as cmds
 
 class MayaEngine(engine.Engine) :
@@ -6,5 +6,9 @@ class MayaEngine(engine.Engine) :
         cmds.file(new = True, force = True)
         cmds.file(path, o = True)
         
+    def save(self):
+        cmds.file(rename="D:/Artfx/GarciaTD4/test.ma")
+        cmds.file(save=True, type="mayaAscii")
+        pass
     def __str__ (self) :
         return 'Maya Engine'
