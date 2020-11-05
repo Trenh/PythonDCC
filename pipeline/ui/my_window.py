@@ -3,8 +3,6 @@ import sys, os
 #sys.path.append(r'\\multifct\tools\pipeline\global\packages') # path to Qt package
 sys.path.append(r'D:/Artfx/GarciaTD4/PythonDCC/')  # path to Qt package
 
-sys.path.append(r'D:/Artfx/GarciaTD4/PythonDCC/pipeline')
-
 from pipeline.engine import engine
 
 
