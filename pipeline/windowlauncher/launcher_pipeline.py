@@ -12,4 +12,4 @@ app = QtWidgets.QApplication(sys.argv)
 win = mw.MyWindow()
 win.show()
 
-app.exec_()
+sys.exit(app.exec_())

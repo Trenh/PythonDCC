@@ -23,6 +23,7 @@ class MyWindow(QtWidgets.QMainWindow) :
         QtCompat.loadUi(ui_path, self) # replace self.setupUi(Self)
         self.open_button.clicked.connect(self.open)
         self.browse_button.clicked.connect(self.browse)
+        self.export_button.clicked.connect(self.browse)
         
     def open(self) :
         print(self.path)
@@ -31,3 +32,7 @@ class MyWindow(QtWidgets.QMainWindow) :
     def browse(self) :
         self.path= QtWidgets.QFileDialog.getOpenFileName(self, "Open file")[0]
         print(self.path)
+
+    def export(self):
+        filename, __ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open file') 
+        self.engine.Alembic_export(filename)

@@ -4,18 +4,17 @@
  It should not be hand-edited when it is being used by the application.
  Note, that two definitions of the same element are not allowed in
  a single file. -->
-<shelfSet name="pipeline" label="Pipeline">
-    <memberToolshelf name="shelf_pipeline"/>
-</shelfSet>
 
- <toolshelf name="shelf_pipeline" label="Pipeline">
-	<memberTool name="fm"/>
+
+  <toolshelf name="pipeline" label="Pipeline">
+    <memberTool name="windowQT"/>
   </toolshelf>
 
-  <tool name="fm" label="File Manager" icon="PLASMA_App">
-    <script scriptType="python"><![CDATA[
-print 'Launched File Manager'
+
+  <tool name="windowQT" label="QT Window" icon="OBJ_geo">
+    <script scriptType="python"><![CDATA[from pipeline.ui import my_window as mw
+win = mw.MyWindow()
+win.show()
 ]]></script>
   </tool>
-
 </shelfDocument>

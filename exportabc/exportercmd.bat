@@ -1,0 +1,2 @@
+"D:/maya2019/Maya2019/bin/mayabatch.exe" -command "python(\"execfile('D:/Artfx/GarciaTD4/PytonDCC/exportabc/exportMaya.py')\");" "D:/Artfx/GarciaTD4/PytonDCC/scene_Test.mb" "D:/Artfx/GarciaTD4/PytonDCC/exportabc/exportedABC" "pSphere1"
+pause

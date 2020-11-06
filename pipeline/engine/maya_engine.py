@@ -1,5 +1,7 @@
 from pipeline.engine import engine
 import maya.cmds as cmds
+import subprocess
+
 
 class MayaEngine(engine.Engine) :
     def open(self, path) :

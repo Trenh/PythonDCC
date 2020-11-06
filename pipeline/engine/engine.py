@@ -7,6 +7,8 @@ class Engine(object) :
     def save(self) :
         pass
 
+    def export(self, path, namespaceString, openFilePath):
+        pass
 def get_current():
     engine = Engine()
 
