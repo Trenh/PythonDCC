@@ -7,8 +7,9 @@ class Engine(object) :
     def save(self) :
         pass
 
-    def export(self, path, namespaceString, openFilePath):
-        pass
+    def export(self, path):
+        mayabat = "C:/Program Files/Autodesk/Maya2020/bin/mayabatch.exe"
+        
 def get_current():
     engine = Engine()
 

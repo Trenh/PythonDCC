@@ -1,5 +1,5 @@
 import sys, os
-
+import subprocess
 #sys.path.append(r'\\multifct\tools\pipeline\global\packages') # path to Qt package
 sys.path.append(r'D:/Artfx/GarciaTD4/PythonDCC/')  # path to Qt package
 
@@ -35,4 +35,6 @@ class MyWindow(QtWidgets.QMainWindow) :
 
     def export(self):
         filename, __ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open file') 
-        self.engine.Alembic_export(filename)
+        self.engine.export(filename)
+        subprocess.call(["D:/installation/houdini_non_com/bin/hython.exe", "./alambic_exporter/create_scene.py"])
+        subprocess.call(["D:/installation/houdini_non_com/bin/hython.exe", "./save.hip", "./alambic_exporter/import_script.py"])
